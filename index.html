@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <link rel="shortcut icon" href="static/image/logo.png">
+  <!-- Tell IE to use the latest, best version. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Earthbook</title>
+  <script src="static/vendor/Cesium-1.46/Build/Cesium/Cesium.js"></script>
+  <style>
+    @import url(static/vendor/Cesium-1.46/Build/Cesium/Widgets/widgets.css);
+  </style>
+  <link rel="stylesheet" type="text/css" href="static/css/index.css">
+</head>
+
+<body>
+  <!--<img id="logo" src="static/image/logo.gif" />-->
+  <div id="transform-panel">
+    <div class="transform-section">
+      <div>
+        <span>Rotation</span>
+        <button id="rotate-reset" class="reset-button">↺</button>
+        <div id="x-rotation-panel" class="rotation-panel">
+          <span class="axis-span">X-axis</span>
+          <button class="rotate-ninety-negative" data-axis="x">↶90</button>
+          <button class="rotate-ninety-positive" data-axis="x">90↷</button>
+          <div class="slider-box">
+            <input type="range" min="0" max="360" value="0" class="rotation-slider" />
+          </div>
+          <div class="text-box">
+            <span class="rotation-text">0</span>°
+          </div>
+        </div>
+        <div id="y-rotation-panel" class="rotation-panel">
+          <span class="axis-span">Y-axis</span>
+          <button class="rotate-ninety-negative" data-axis="y">↶90</button>
+          <button class="rotate-ninety-positive" data-axis="y">90↷</button>
+          <div class="slider-box">
+            <input type="range" min="0" max="360" value="0" class="rotation-slider" />
+          </div>
+          <div class="text-box">
+            <span class="rotation-text">0</span>°
+          </div>
+        </div>
+        <div id="z-rotation-panel" class="rotation-panel">
+          <span class="axis-span">Z-axis</span>
+          <button class="rotate-ninety-negative" data-axis="z">↶90</button>
+          <button class="rotate-ninety-positive" data-axis="z">90↷</button>
+          <div class="slider-box">
+            <input type="range" min="0" max="360" value="0" class="rotation-slider" />
+          </div>
+          <div class="text-box">
+            <span class="rotation-text">0</span>°
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="transform-section">
+      <span>Scale</span>
+      <button id="scale-reset" class="reset-button">↺</button>
+      <input type="number" id="scale-input" value="1.0" step="0.1" />
+    </div>
+    <div class="transform-section">
+      <span>Translation</span>
+      <button id="translation-reset" class="reset-button">↺</button>
+      <div>
+        <span class="direction-span">latitude</span>
+        <input id="latitude-input" type="number" step="0.0001"/>
+      </div>
+      <div>
+        <span class="direction-span">longitude</span>
+        <input id="longitude-input" type="number" step="0.0001"/>
+      </div>
+      <div>
+        <span class="direction-span">height</span>
+        <input id="height-input" type="number" step="1"/>
+      </div>
+    </div>
+  </div>
+
+  <div id="cesiumContainer"></div>
+  <script src="static/vendor/jquery-3.3.1.min.js"></script>
+  <script src="static/js/index.js"> </script>
+</body>
+
+</html>

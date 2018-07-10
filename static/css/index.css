@@ -1,0 +1,137 @@
+html,
+body,
+#cesiumContainer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo {
+    z-index: 100;
+    position: fixed;
+    top: 86%;
+    left: 5%;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 300px;
+    padding: 5px;
+}
+
+.cesium-viewer-bottom,
+.cesium-viewer-animationContainer,
+.cesium-viewer-timelineContainer {
+    display: none;
+}
+
+button:hover, input[type="button"]:hover {
+    cursor: pointer;
+}
+
+#transform-panel {
+    display: inline-block;
+    position: fixed;
+    top: 1%;
+    left: 1%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 1%;
+    width: 300px;
+}
+
+.transform-section {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.rotation-panel {
+    margin-top: 10px;
+}
+
+.slider-box {
+    display: inline-block;
+    width: 80%;
+}
+
+.rotation-slider {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 5px;
+    background: black;
+    border: 1px solid grey;
+}
+
+.rotation-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: darkslateblue;
+    cursor: pointer;
+}
+
+.rotation-slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: darkslateblue;
+    cursor: pointer;
+}
+
+.text-box {
+    display: inline-block;
+    width: 15%;
+    padding-left: 1%;
+}
+
+.reset-button {
+    border-radius: 2px;
+    border: none;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+.rotate-ninety-positive, .rotate-ninety-negative {
+    border-radius: 2px;
+    border: none;
+    background-color: rgb(50, 50, 50);
+    color: white;
+}
+
+#scale-input {
+    background: black;
+    color: white;
+    width: 3rem;
+    border-radius: 3px;
+    border: 1px solid grey;
+    margin-left: 10px;
+}
+
+.divider {
+    padding-top: 5px;
+    border-bottom: 1px solid grey;
+    margin-bottom: 5px;
+}
+
+.direction-span {
+    display: inline-block;
+    width: 40%;
+    color: rgb(200, 200, 200);
+    margin-top: 5px;
+}
+
+.axis-span {
+    color: rgb(200, 200, 200);
+}
+
+#latitude-input, #longitude-input, #height-input {
+    display: inline-block;
+    width: 50%;
+    background: black;
+    color: white;
+    border-radius: 3px;
+    border: 1px solid grey;
+}
